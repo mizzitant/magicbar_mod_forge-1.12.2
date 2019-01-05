@@ -1,0 +1,16 @@
+[
+{
+  "modid": "magicbar",
+  "name": "The Magic Bar Mod",
+  "description": "Example placeholder mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Daniel, Gabriel, Martin"],
+  "credits": "To my whole family and The Forge and FML guys, for making this possible",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
