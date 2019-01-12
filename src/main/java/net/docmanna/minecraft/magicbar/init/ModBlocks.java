@@ -17,36 +17,36 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = MagicBarMod.MODID)
 public class ModBlocks {
 
-	static Block magicBarBlock;
+	static Block blockMagicBar;
 
 	public static void init() {
-		magicBarBlock = new MagicBlock("magicbar_block", Material.ROCK,
+		blockMagicBar = new MagicBlock("magicbar_block", Material.ROCK,
 				ModItems.itemBar, 1, 5);
 		
-		magicBarBlock
+		blockMagicBar
 		.setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
 		.setHardness(1.5f)
 		.setLightLevel(8/15f);
 		// tool classes: “pickaxe”, “shovel”, “axe”
 	    // levels :	0=wood or gold, 1=stone, 2=iron, 3=diamond
-		magicBarBlock.setHarvestLevel("pickaxe", 2);
+		blockMagicBar.setHarvestLevel("pickaxe", 2);
 	}
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(magicBarBlock);
+		event.getRegistry().register(blockMagicBar);
 	}
 
 	@SubscribeEvent
 	public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(
-				new ItemBlock(magicBarBlock)
-				.setRegistryName(magicBarBlock.getRegistryName()));
+				new ItemBlock(blockMagicBar)
+				.setRegistryName(blockMagicBar.getRegistryName()));
 	}
 
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		registerRender(Item.getItemFromBlock(magicBarBlock));
+		registerRender(Item.getItemFromBlock(blockMagicBar));
 	}
 
 	public static void registerRender(Item item) {

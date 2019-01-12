@@ -1,0 +1,19 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "magicbar:magic_wand",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "magicbar:magicbar_block",
+    "data": 0
+  }
+}

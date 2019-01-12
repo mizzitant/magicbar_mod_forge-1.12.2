@@ -4,6 +4,9 @@ import org.apache.logging.log4j.Logger;
 
 import net.docmanna.minecraft.magicbar.init.ModBlocks;
 import net.docmanna.minecraft.magicbar.init.ModItems;
+import net.docmanna.minecraft.magicbar.init.ModRecipes;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -31,6 +34,7 @@ public class MagicBarMod {
 		logger.info(MODID + ":preInit");
 		ModItems.init();
 		ModBlocks.init();
+		ModRecipes.init();
 	}
 
 	@EventHandler
@@ -38,6 +42,7 @@ public class MagicBarMod {
 		// some example code
 		// logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 		logger.info(MODID, ":init");
+		
 	}
 
 	@EventHandler
