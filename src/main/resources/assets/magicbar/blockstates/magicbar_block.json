@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "magicbar:magicbar_block" }
+        ]
+    }
+}
