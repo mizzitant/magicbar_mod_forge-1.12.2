@@ -2,9 +2,9 @@ package net.docmanna.minecraft.magicbar.items;
 
 import net.minecraft.item.Item;
 
-public class ItemBasic extends Item {
+public class BasicItem extends Item {
 
-	public ItemBasic(String name) {
+	public BasicItem(String name) {
 		setUnlocalizedName(name);
 		setRegistryName(name);
 	}

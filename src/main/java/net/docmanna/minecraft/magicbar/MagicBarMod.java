@@ -2,6 +2,7 @@ package net.docmanna.minecraft.magicbar;
 
 import org.apache.logging.log4j.Logger;
 
+import net.docmanna.minecraft.magicbar.init.ModBlocks;
 import net.docmanna.minecraft.magicbar.init.ModItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -29,6 +30,7 @@ public class MagicBarMod {
 		logger = event.getModLog();
 		logger.info(MODID + ":preInit");
 		ModItems.init();
+		ModBlocks.init();
 	}
 
 	@EventHandler

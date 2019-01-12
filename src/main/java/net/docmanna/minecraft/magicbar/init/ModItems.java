@@ -1,7 +1,7 @@
 package net.docmanna.minecraft.magicbar.init;
 
 import net.docmanna.minecraft.magicbar.MagicBarMod;
-import net.docmanna.minecraft.magicbar.items.ItemBasic;
+import net.docmanna.minecraft.magicbar.items.BasicItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,10 +16,9 @@ public class ModItems {
 	static Item itemBar;
 
 	public static void init() {
-		itemBar = new ItemBasic("magicbar");
+		itemBar = new BasicItem("magicbar");
 		itemBar.setCreativeTab(CreativeTabs.MISC);
 		itemBar.setMaxStackSize(32);
-
 	}
 
 	@SubscribeEvent
