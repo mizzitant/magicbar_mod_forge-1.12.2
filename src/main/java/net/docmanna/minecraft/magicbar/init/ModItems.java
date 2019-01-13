@@ -22,22 +22,29 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = MagicBarMod.MODID)
 public class ModItems {
 	static Item itemBar;
+	static Item itemMagicWand;
 
 	public static void init() {
 		itemBar = new BasicItem("magicbar");
 		itemBar.setCreativeTab(CreativeTabs.MISC);
 		itemBar.setMaxStackSize(32);
+
+		itemMagicWand = new BasicItem("magicwand");
+		itemMagicWand.setCreativeTab(CreativeTabs.MISC);
+		itemMagicWand.setMaxStackSize(32);
+
 	}
 
 	@SubscribeEvent
 	// RegistryEvents: These events are fired right after preinitialization
 	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(itemBar);
+		event.getRegistry().registerAll(itemBar, itemMagicWand);
 	}
 
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
 		registerRender(itemBar);
+		registerRender(itemMagicWand);
 	}
 
 	private static void registerRender(Item item) {

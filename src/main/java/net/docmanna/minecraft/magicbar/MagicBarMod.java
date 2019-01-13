@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import net.docmanna.minecraft.magicbar.init.ModBlocks;
 import net.docmanna.minecraft.magicbar.init.ModItems;
 import net.docmanna.minecraft.magicbar.init.ModRecipes;
+import net.docmanna.minecraft.magicbar.world.MagicBlockGen;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.Mod;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = MagicBarMod.MODID, name = MagicBarMod.NAME, version = MagicBarMod.VERSION)
 public class MagicBarMod {
@@ -42,7 +44,9 @@ public class MagicBarMod {
 		// some example code
 		// logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 		logger.info(MODID, ":init");
-		
+		// The weight is used to determine when the generator is ran. The higher the
+		// later (and thus less chance your blocks will be removed).
+		GameRegistry.registerWorldGenerator(new MagicBlockGen(), 5);
 	}
 
 	@EventHandler

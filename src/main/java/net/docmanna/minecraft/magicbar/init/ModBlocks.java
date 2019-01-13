@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = MagicBarMod.MODID)
 public class ModBlocks {
 
-	static Block blockMagicBar;
+	public static Block blockMagicBar;
 
 	public static void init() {
 		blockMagicBar = new MagicBlock("magicbar_block", Material.ROCK,
